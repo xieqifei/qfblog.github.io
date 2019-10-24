@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fei.bar/"/>
-  <updated>2019-10-23T21:16:56.000Z</updated>
+  <updated>2019-10-24T21:13:08.000Z</updated>
   <id>https://fei.bar/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你好！世界！</title>
+    <link href="https://fei.bar/2019/10/24/hello-world/"/>
+    <id>https://fei.bar/2019/10/24/hello-world/</id>
+    <published>2019-10-24T20:42:20.000Z</published>
+    <updated>2019-10-24T21:13:08.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;第一次使用github搭建纯静态网站，比使用wordpress搭建网站麻烦很多，功能也少了很多，但其同样也有有点。无限流量、无限带宽，还不用我维护服务器，不需要花钱购买服务器，不用在工信部备案。打开速度也非常快！哇！简直新大陆。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="其他" scheme="https://fei.bar/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="你好！世界！" scheme="https://fei.bar/tags/%E4%BD%A0%E5%A5%BD%EF%BC%81%E4%B8%96%E7%95%8C%EF%BC%81/"/>
+    
+      <category term="博客开始" scheme="https://fei.bar/tags/%E5%8D%9A%E5%AE%A2%E5%BC%80%E5%A7%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>二零一七年终总结</title>

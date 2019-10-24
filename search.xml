@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>你好！世界！</title>
+      <link href="/2019/10/24/hello-world/"/>
+      <url>/2019/10/24/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>第一次使用github搭建纯静态网站，比使用wordpress搭建网站麻烦很多，功能也少了很多，但其同样也有有点。无限流量、无限带宽，还不用我维护服务器，不需要花钱购买服务器，不用在工信部备案。打开速度也非常快！哇！简直新大陆。</p><h2 id="简单介绍搭建过程"><a href="#简单介绍搭建过程" class="headerlink" title="#简单介绍搭建过程"></a>#简单介绍搭建过程</h2><p><strong>创建Github账号</strong>：新建一个仓库，克隆此仓库里的主题到自己仓库。然后在电脑上安装git以及使用git命令行下载hexo。</p><blockquote><p><a href="https://github.com/godweiyang/hexo-matery-modified" target="_blank" rel="noopener">https://github.com/godweiyang/hexo-matery-modified</a></p></blockquote><p>使用hexo创建网站、新建文章等。接下来就是<strong>购买域名</strong>。为了买fei.bar这个域名，我可谓下了血本。370一年的费用，不可谓不高，够.com用7年了。但这个域名确实很好，有很大的升值空间。以后要卖的话应该是不会亏的。<br><strong>解析域名到Github</strong>，其实比较麻烦的还是添加ssl证书。我直接用的cloudflare，所以有免费的ssl证书和免费的cdn。强推cloudflare。</p><h2 id="使用情况"><a href="#使用情况" class="headerlink" title="#使用情况"></a>#使用情况</h2><p>就网站的运行来看，非常流畅。就写文章来看，比wordpress写文章麻烦不少，这个写文章全靠符号堆积各种样式，比如代码高亮、标题。而且字体格式和大小是不能随意切换的。好在写作要求也没那么多，毕竟静态网页，要实现动态网页那么多操作。要做的准备工作太复杂了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 你好！世界！ </tag>
+            
+            <tag> 博客开始 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>二零一七年终总结</title>
       <link href="/2018/01/22/2017-conclusion/"/>
       <url>/2018/01/22/2017-conclusion/</url>
