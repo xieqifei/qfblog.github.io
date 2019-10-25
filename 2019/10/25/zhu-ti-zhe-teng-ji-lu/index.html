@@ -494,11 +494,14 @@
 <h2 id="四、修改了网站名称字体颜色"><a href="#四、修改了网站名称字体颜色" class="headerlink" title="四、修改了网站名称字体颜色"></a>四、修改了网站名称字体颜色</h2><blockquote>
 <p>header .brand-logo .logo-span {<br>    font-size: 2.5rem;<br>    font-family: 楷体;<br>    color: red;<br>}</p>
 </blockquote>
-<h2 id="五、去掉valine评论中的版权信息"><a href="#五、去掉valine评论中的版权信息" class="headerlink" title="五、去掉valine评论中的版权信息"></a>五、去掉valine评论中的版权信息</h2><p><img src="5.png" alt><br>valine评论框里的版权信息，不是那么美观，而且占用网页空间。不如把他去掉吧。<br>找到valine的js文件存放地址<strong>D:\blog\themes\matery\source\libs\valine</strong>，这个文件夹下有两个文件。<br><em>av-min.js
-</em>Valine.min.js<br>使用记事本打开<strong>Valine.min.js</strong>文件。查找<strong>Powered</strong>关键词，定位到版权信息的位置。<br>删除以下内容</p>
-<blockquote>
+<h2 id="五、去掉valine评论中的版权信息"><a href="#五、去掉valine评论中的版权信息" class="headerlink" title="五、去掉valine评论中的版权信息"></a>五、去掉valine评论中的版权信息</h2><p><img src="5.png" alt><br>valine评论框里的版权信息，不是那么美观，而且占用网页空间。不如把他去掉吧。<br>找到valine的js文件存放地址<strong>D:\blog\themes\matery\source\libs\valine</strong>，这个文件夹下有两个文件。</p>
+<ul>
+<li>av-min.js</li>
+<li>Valine.min.js<br>使用记事本打开<strong>Valine.min.js</strong>文件。查找<strong>Powered</strong>关键词，定位到版权信息的位置。<br>删除以下内容<blockquote>
 <div class="info"><div class="power txt-right">Powered By <a href="https://valine.js.org" target="_blank">Valine</a><br>v'+o+"</div></div>"
 </blockquote>
+</li>
+</ul>
 <p>###同时由于删除了代码<br>v后面的<strong>‘</strong>符号，需在删除的位置添加一个<strong>‘</strong>符号，否则代码是错误的。<br>修改后效果：<br><img src="6.png" alt></p>
 
             </div>
