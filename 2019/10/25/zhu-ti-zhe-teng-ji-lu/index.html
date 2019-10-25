@@ -4,12 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="你好！世界！, 谢啓飞 啓飞个人网 前端">
+    <meta name="keywords" content="主题折腾记录, 谢啓飞 啓飞个人网 前端">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="第一次使用github搭建纯静态网站，比使用wordpress搭建网站麻烦很多，功能也少了很多，但其同样也有有点。无限流量、无限带宽，还不用我维护服务器，不需要花钱购买服务器，不用在工信部备案。打开速度也非常快！哇！简直新大陆。
-#简单介绍">
+    <meta name="description" content="#导航菜单文字不清晰导航文字不清晰，主要是由于导航菜单设置了透明度引起的。我不知道主题作者怎么想的吧，反正我觉得导航菜单透明，会造成导航栏上的文字不清晰，会和底部图画形成重影，非常难看。因此我通过浏览器检查功能，找到了这个透明度的源码。在C">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>你好！世界！ | 飞吧</title>
+    <title>主题折腾记录 | 飞吧</title>
     <link rel="icon" type="image/jpeg" href="/profile.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -291,13 +290,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        你好！世界！
+                        主题折腾记录
                     </div>
                 </div>
             </div>
@@ -408,12 +407,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/你好！世界！/" target="_blank">
-                            <span class="chip bg-color">你好！世界！</span>
+                        <a href="/tags/主题/" target="_blank">
+                            <span class="chip bg-color">主题</span>
                         </a>
                         
-                        <a href="/tags/博客开始/" target="_blank">
-                            <span class="chip bg-color">博客开始</span>
+                        <a href="/tags/CSS/" target="_blank">
+                            <span class="chip bg-color">CSS</span>
                         </a>
                         
                     </div>
@@ -436,7 +435,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-24
+                    2019-10-25
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -450,7 +449,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    383
+                    172
                 </div>
                 
 
@@ -473,13 +472,11 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>第一次使用github搭建纯静态网站，比使用wordpress搭建网站麻烦很多，功能也少了很多，但其同样也有有点。无限流量、无限带宽，还不用我维护服务器，不需要花钱购买服务器，不用在工信部备案。打开速度也非常快！哇！简直新大陆。</p>
-<h2 id="简单介绍搭建过程"><a href="#简单介绍搭建过程" class="headerlink" title="#简单介绍搭建过程"></a>#简单介绍搭建过程</h2><p><strong>创建Github账号</strong>：新建一个仓库，克隆此仓库里的主题到自己仓库。然后在电脑上安装git以及使用git命令行下载hexo。</p>
+                <h2 id="导航菜单文字不清晰"><a href="#导航菜单文字不清晰" class="headerlink" title="#导航菜单文字不清晰"></a>#导航菜单文字不清晰</h2><p><strong>导航文字不清晰，主要是由于导航菜单设置了透明度引起的。</strong>我不知道主题作者怎么想的吧，反正我觉得导航菜单透明，会造成导航栏上的文字不清晰，会和底部图画形成重影，非常难看。因此我通过浏览器检查功能，找到了这个透明度的源码。在CSS中，是bg-color这个类里，opacity这个属性导致的。<br><strong>修改办法</strong>：打开matery.ccs文件第166行。</p>
 <blockquote>
-<p><a href="https://github.com/godweiyang/hexo-matery-modified" target="_blank" rel="noopener">https://github.com/godweiyang/hexo-matery-modified</a></p>
+<p>.bg-color{<br>background-image: linear-gradient(to right, #4caf50 0%, #26a69a 100%);<br>    opacity: 0.7;<br>}</p>
 </blockquote>
-<p>使用hexo创建网站、新建文章等。接下来就是<strong>购买域名</strong>。为了买fei.bar这个域名，我可谓下了血本。370一年的费用，不可谓不高，够.com用7年了。但这个域名确实很好，有很大的升值空间。以后要卖的话应该是不会亏的。<br><strong>解析域名到Github</strong>，其实比较麻烦的还是添加ssl证书。我直接用的cloudflare，所以有免费的ssl证书和免费的cdn。强推cloudflare。</p>
-<h2 id="使用情况"><a href="#使用情况" class="headerlink" title="#使用情况"></a>#使用情况</h2><p>就网站的运行来看，非常流畅。就写文章来看，比wordpress写文章麻烦不少，这个写文章全靠符号堆积各种样式，比如代码高亮、标题。而且字体格式和大小是不能随意切换的。好在写作要求也没那么多，毕竟静态网页，要实现动态网页那么多操作。要做的准备工作太复杂了。</p>
+<p>将0.7改为1。导航菜单文字顿时变得更清晰了。</p>
 
             </div>
             <hr />
@@ -638,9 +635,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《你好！世界！》
+                    《主题折腾记录》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/24/hello-world/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/25/zhu-ti-zhe-teng-ji-lu/" property="cc:attributionName"
                rel="cc:attributionURL">
                 啓飞
             </a> 采用
@@ -681,7 +678,7 @@
         repo: 'xieqifei.github.io',
         owner: 'xieqifei',
         admin: "xieqifei",
-        id: '2019/10/24/hello-world/',
+        id: '2019/10/25/zhu-ti-zhe-teng-ji-lu/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -964,9 +961,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/10/25/zhu-ti-zhe-teng-ji-lu/">
                     <div class="card-image">
@@ -984,9 +982,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -999,6 +997,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1021,31 +1020,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/01/22/2017-conclusion/">
+                <a href="/2019/10/24/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="二零一七年终总结">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="你好！世界！">
                         
-                        <span class="card-title">二零一七年终总结</span>
+                        <span class="card-title">你好！世界！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            时间过得很快，终于等到放寒假了，虽然这几个月没有课，天天和放假也没啥区别呢。细数一下，还有5个月就要毕业了吧，大一刚入学的场景却依然清楚地记得，转眼间就成了老学长了呢。闲来无事，随便写写，有感而发，无病呻吟而已。
+                            今天飞吧正式开始运营，自啓飞个人网之后，我一直想找个地方做单纯的写作。github给我提供了很好的平台，因为这个网站将永远不会关闭。这会是一个很好的开始！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-01-22
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-24
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/随笔/" class="post-category" target="_blank">
-                                    随笔
+                            <a href="/categories/其他/" class="post-category" target="_blank">
+                                    其他
                                 </a>
                             
                             
@@ -1055,8 +1054,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/随笔/" target="_blank">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/你好！世界！/" target="_blank">
+                        <span class="chip bg-color">你好！世界！</span>
+                    </a>
+                    
+                    <a href="/tags/博客开始/" target="_blank">
+                        <span class="chip bg-color">博客开始</span>
                     </a>
                     
                 </div>
@@ -1203,6 +1206,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
     <footer class="page-footer bg-color">
     <div class="container row center-align">
