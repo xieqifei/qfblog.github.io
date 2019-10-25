@@ -474,7 +474,7 @@
             <div id="articleContent">
                 <h2 id="导航菜单文字不清晰"><a href="#导航菜单文字不清晰" class="headerlink" title="#导航菜单文字不清晰"></a>#导航菜单文字不清晰</h2><p><strong>导航文字不清晰，主要是由于导航菜单设置了透明度引起的。</strong>我不知道主题作者怎么想的吧，反正我觉得导航菜单透明，会造成导航栏上的文字不清晰，会和底部图画形成重影，非常难看。因此我通过浏览器检查功能，找到了这个透明度的源码。在CSS中，是bg-color这个类里，opacity这个属性导致的。<br><strong>修改办法</strong>：打开matery.ccs文件第166行。</p>
 <blockquote>
-<p>.bg-color{<br>background-image: linear-gradient(to right, #4caf50 0%, #26a69a 100%);<br>    opacity: 0.7;<br>}</p>
+<p>.bg-color{<br>background-image: linear-gradient( to right, #4caf50 0%, #26a69a 100% );<br>    opacity: 0.7;<br>}</p>
 </blockquote>
 <p>将0.7改为1。导航菜单文字顿时变得更清晰了。</p>
 
