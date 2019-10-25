@@ -51,13 +51,6 @@
   </url>
   
   <url>
-    <loc>https://fei.bar/categories/index.html</loc>
-    
-    <lastmod>2019-10-23T21:16:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://fei.bar/archives/index.html</loc>
     
     <lastmod>2019-10-23T21:16:56.000Z</lastmod>
@@ -66,6 +59,13 @@
   
   <url>
     <loc>https://fei.bar/tags/index.html</loc>
+    
+    <lastmod>2019-10-23T21:16:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://fei.bar/categories/index.html</loc>
     
     <lastmod>2019-10-23T21:16:56.000Z</lastmod>
     

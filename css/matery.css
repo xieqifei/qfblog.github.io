@@ -222,6 +222,7 @@ header .brand-logo .logo-img {
 header .brand-logo .logo-span {
     font-size: 2.5rem;
 	font-family: 楷体;
+	color: red;
 }
 
 header .button-collapse i {
