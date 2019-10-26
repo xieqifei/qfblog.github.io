@@ -449,7 +449,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
@@ -569,6 +569,12 @@ menu:
     border-radius: 8px;
     overflow: hidden;
 }</code></pre><p>如此博文卡片就带上了圆角。</p>
+<p>但是由于隐藏了溢出内容，友链的按钮多余部分也被隐藏了。</p>
+<p><img src="7.png" alt></p>
+<p>为了修改这个bug，打开<code>D:\blog\themes\matery\layout\friends.ejs</code>，在文件中找到div标签，给card标签加入内联css样式。</p>
+<p><code>&lt;div class=&quot;card frind-card&lt;%- ((i % 10) +1) %&gt;&quot; style=&quot;overflow: visible;&quot;&gt;</code></p>
+<p>修改后样式：</p>
+<p><img src="8.png" alt></p>
 
             </div>
             <hr />
