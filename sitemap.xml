@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://fei.bar/2019/10/24/hello-world/</loc>
+    
+    <lastmod>2019-10-26T15:46:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://fei.bar/2019/10/26/zaltv-ji-huo-ma-he-ruan-jian-xia-zai/</loc>
     
     <lastmod>2019-10-26T15:39:44.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://fei.bar/2019/10/25/zhu-ti-zhe-teng-ji-lu/</loc>
     
     <lastmod>2019-10-26T12:13:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://fei.bar/2019/10/24/hello-world/</loc>
-    
-    <lastmod>2019-10-25T14:42:18.000Z</lastmod>
     
   </url>
   
@@ -51,14 +51,14 @@
   </url>
   
   <url>
-    <loc>https://fei.bar/categories/index.html</loc>
+    <loc>https://fei.bar/archives/index.html</loc>
     
     <lastmod>2019-10-23T21:16:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://fei.bar/archives/index.html</loc>
+    <loc>https://fei.bar/categories/index.html</loc>
     
     <lastmod>2019-10-23T21:16:56.000Z</lastmod>
     
