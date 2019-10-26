@@ -8,7 +8,7 @@
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="一、导航菜单文字不清晰导航文字不清晰，主要是由于导航菜单设置了透明度引起的。我不知道主题作者怎么想的吧，反正我觉得导航菜单透明，会造成导航栏上的文字不清晰，会和底部图画形成重影，非常难看。因此我通过浏览器检查功能，找到了这个透明度的源码。在">
+    <meta name="description" content="一、导航菜单文字不清晰导航文字不清晰，主要是由于导航菜单设置了透明度引起的。导航菜单透明，会造成导航栏上的文字不清晰，会和底部图画形成重影，不好看。因此我通过浏览器检查功能，找到了这个透明度的源码。在CSS中，是bg-color这个类里，o">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -467,14 +467,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    582
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
                 
@@ -490,7 +490,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、导航菜单文字不清晰"><a href="#一、导航菜单文字不清晰" class="headerlink" title="一、导航菜单文字不清晰"></a>一、导航菜单文字不清晰</h2><p><strong>导航文字不清晰，主要是由于导航菜单设置了透明度引起的。</strong>我不知道主题作者怎么想的吧，反正我觉得导航菜单透明，会造成导航栏上的文字不清晰，会和底部图画形成重影，非常难看。因此我通过浏览器检查功能，找到了这个透明度的源码。在CSS中，是bg-color这个类里，opacity这个属性导致的。<br><strong>修改办法</strong>：打开matery.ccs文件第166行。</p>
+                <h2 id="一、导航菜单文字不清晰"><a href="#一、导航菜单文字不清晰" class="headerlink" title="一、导航菜单文字不清晰"></a>一、导航菜单文字不清晰</h2><p><strong>导航文字不清晰，主要是由于导航菜单设置了透明度引起的。</strong>导航菜单透明，会造成导航栏上的文字不清晰，会和底部图画形成重影，不好看。因此我通过浏览器检查功能，找到了这个透明度的源码。在CSS中，是bg-color这个类里，opacity这个属性导致的。<br><strong>修改办法</strong>：打开matery.ccs文件第166行。</p>
 <blockquote>
 <p>.bg-color{<br>background-image: linear-gradient( to right, #4caf50 0%, #26a69a 100% );<br>    opacity: 0.7;<br>}</p>
 </blockquote>
@@ -515,6 +515,78 @@
 </ul>
 <p>使用记事本打开<strong>Valine.min.js</strong>文件。查找<strong>Powered</strong>关键词，定位到版权信息的位置。<br>删除以下内容</p>
 <pre><code>    &lt;div class=&quot;info&quot;&gt;&lt;div class=&quot;power txt-right&quot;&gt;Powered By &lt;a href=&quot;https://valine.js.org&quot; target=&quot;_blank&quot;&gt;Valine&lt;/a&gt;&lt;br&gt;v&#39;+o+&quot;&lt;/div&gt;&lt;/div&gt;&quot;</code></pre><p>同时由于删除了代码 <code>&lt;/a&gt;&lt;br&gt;v</code> 后面的<code>&#39;</code>符号，需在删除的位置添加一个<code>&#39;</code>符号，否则代码是错误的。<br>修改后效果：<br><img src="6.png" alt></p>
+<hr>
+<h2 id="六、修改头部幻灯片滤镜颜色和透明度"><a href="#六、修改头部幻灯片滤镜颜色和透明度" class="headerlink" title="六、修改头部幻灯片滤镜颜色和透明度"></a>六、修改头部幻灯片滤镜颜色和透明度</h2><p>打开matery.css，找到450行左右，修改为如下代码。</p>
+<pre><code>@keyframes rainbow {
+    0%,
+    100% {
+        background: rgba(66,197,138,0.3);
+        background: linear-gradient(45deg, rgba(66,197,138,0.3) 0%, rgba(66,197,138, 0.3) 100%);
+        background: -moz-linear-gradient(135deg, rgba(66,197,138,0.3) 0%, rgba(66,197,138, 0.3) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(66,197,138,0.3) 0%, rgba(66,197,138, 0.3) 100%);
+    }
+    16% {
+        background: rgba(60,179,113, 0.3);
+        background: linear-gradient(45deg, rgba(60,179,113, 0.3) 0%, rgba(60,179,113, 0.3) 100%);
+        background: -moz-linear-gradient(135deg, rgba(60,179,113, 0.3) 0%, rgba(60,179,113, 0.3) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(60,179,113, 0.3) 0%, rgba(60,179,113, 0.3) 100%);
+    }
+    32% {
+        background: rgba(0,206,209, 0.3);
+        background: linear-gradient(45deg, rgba(0,206,209, 0.3) 0%, rgba(0,206,209, 0.3) 100%);
+        background: -moz-linear-gradient(135deg, rgba(0,206,209, 0.3) 0%, rgba(0,206,209, 0.3) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(0,206,209, 0.3) 0%, rgba(0,206,209, 0.3) 100%);
+    }
+    48% {
+        background: rgba(0,191,255, 0.3);
+        background: linear-gradient(45deg, rgba(0,191,255, 0.3) 0%, rgba(0,191,255, 0.3) 100%);
+        background: -moz-linear-gradient(135deg, rgba(0,191,255, 0.3) 0%, rgba(0,191,255, 0.3) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(0,191,255, 0.3) 0%, rgba(0,191,255, 0.3) 100%);
+    }
+    64% {
+        background: rgba(30,144,255, 0.3);
+        background: linear-gradient(45deg, rgba(30,144,255, 0.3) 0%, rgba(30,144,255, 0.3) 100%);
+        background: -moz-linear-gradient(135deg, rgba(30,144,255, 0.3) 0%, rgba(30,144,255, 0.3) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(30,144,255, 0.3) 0%, rgba(30,144,255, 0.3) 100%);
+    }
+    80% {
+        background: rgba(65,105,225, 0.3);
+        background: linear-gradient(45deg, rgba(65,105,225, 0.3) 0%, rgba(65,105,225, 0.3) 100%);
+        background: -moz-linear-gradient(135deg, rgba(65,105,225, 0.3) 0%, rgba(65,105,225, 0.3) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(65,105,225, 0.3) 0%, rgba(65,105,225, 0.3) 100%);
+    }
+}</code></pre><p>这样页面就更好看了。</p>
+<hr>
+<h2 id="七、修改菜单栏图标"><a href="#七、修改菜单栏图标" class="headerlink" title="七、修改菜单栏图标"></a>七、修改菜单栏图标</h2><p>在<code>D:\blog\themes\matery\_config.yml</code>文件中，修改fontawesone图标。</p>
+<pre><code># main menu navigation url and icon
+# 配置菜单导航的名称、路径和图标icon.
+menu:
+  Index:
+    url: /
+    icon: fa-home
+  Tags:
+    url: /tags
+    icon: fa-tags
+  Categories:
+    url: /categories
+    icon: fa-bookmark
+  Archives:
+    url: /archives
+    icon: fa-archive
+  About:
+    url: /about
+    icon: fa-user-circle-o
+  Friends:
+    url: /friends
+    icon: fa-users
+  Contact:
+    url: /contact
+    icon: fa-address-book</code></pre><hr>
+<h2 id="八、修改首页预览博文div标签样式"><a href="#八、修改首页预览博文div标签样式" class="headerlink" title="八、修改首页预览博文div标签样式"></a>八、修改首页预览博文div标签样式</h2><p>在<code>matery.css</code>第699行修改为如下代码</p>
+<pre><code>article .card {
+    border-radius: 8px;
+    overflow: hidden;
+}</code></pre><p>如此博文卡片就带上了圆角。</p>
 
             </div>
             <hr />
@@ -1256,7 +1328,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">967</span>
+            <span class="white-color">1.5k</span>
             
 
             <br>
