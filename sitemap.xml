@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://fei.bar/2019/11/01/wan-sheng-jie/</loc>
+    
+    <lastmod>2019-11-01T11:15:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://fei.bar/2019/10/28/ji-zai-ya-chen-di-yi-ci-zai-jia-ju-can/</loc>
     
     <lastmod>2019-10-28T21:54:42.000Z</lastmod>
@@ -86,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://fei.bar/archives/index.html</loc>
+    <loc>https://fei.bar/tags/index.html</loc>
     
     <lastmod>2019-10-23T21:16:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://fei.bar/tags/index.html</loc>
+    <loc>https://fei.bar/archives/index.html</loc>
     
     <lastmod>2019-10-23T21:16:56.000Z</lastmod>
     
