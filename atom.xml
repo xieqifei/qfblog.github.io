@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fei.bar/"/>
-  <updated>2019-11-02T16:35:54.220Z</updated>
+  <updated>2019-11-03T17:44:11.158Z</updated>
   <id>https://fei.bar/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新体会</title>
+    <link href="https://fei.bar/2019/11/03/xin-ti-hui/"/>
+    <id>https://fei.bar/2019/11/03/xin-ti-hui/</id>
+    <published>2019-11-03T17:11:51.000Z</published>
+    <updated>2019-11-03T17:44:11.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="留学" scheme="https://fei.bar/categories/%E7%95%99%E5%AD%A6/"/>
+    
+    
+      <category term="学习" scheme="https://fei.bar/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Grandpa Kitchen RIP</title>
