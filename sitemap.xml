@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://fei.bar/2019/11/04/ai-sen-yi-ri/</loc>
+    
+    <lastmod>2019-11-04T14:47:47.277Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://fei.bar/2019/11/03/xin-ti-hui/</loc>
     
     <lastmod>2019-11-03T17:44:11.158Z</lastmod>
@@ -100,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://fei.bar/archives/index.html</loc>
+    <loc>https://fei.bar/categories/index.html</loc>
     
     <lastmod>2019-10-23T21:16:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://fei.bar/categories/index.html</loc>
+    <loc>https://fei.bar/archives/index.html</loc>
     
     <lastmod>2019-10-23T21:16:56.000Z</lastmod>
     
