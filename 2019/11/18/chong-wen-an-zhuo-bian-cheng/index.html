@@ -498,17 +498,17 @@
 <li><p>基于Java代码访问资源</p>
 <ul>
 <li><p>Java代码访问方式:</p>
-<pre><code>[\&lt;packge-name&gt;.]R.   //R类所在包路径可省略
-&lt;resource_type&gt;.&lt;resource_name&gt;  //resource_type：资源类型如color等。</code></pre></li>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token punctuation">[</span>\<span class="token operator">&lt;</span>packge<span class="token operator">-</span>name<span class="token operator">></span><span class="token punctuation">.</span><span class="token punctuation">]</span>R<span class="token punctuation">.</span>   <span class="token comment" spellcheck="true">//R类所在包路径可省略</span>
+<span class="token operator">&lt;</span>resource_type<span class="token operator">></span><span class="token punctuation">.</span>&lt;resource_name<span class="token operator">></span>  <span class="token comment" spellcheck="true">//resource_type：资源类型如color等。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 <li><p>Java访问示例</p>
 <ul>
 <li><p>//从drawable目录中加载图片，设置为背景图片</p>
-<p><code>getWindow().setBackgroundDrawableResource(R.drawable.back)</code></p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token function">getWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setBackgroundDrawableResource</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>back<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>//从string设置字符串资源，设置为文本框的显示内容</p>
 <pre class="line-numbers language-java"><code class="language-java">TextView title<span class="token operator">=</span><span class="token punctuation">(</span>TextView<span class="token punctuation">)</span><span class="token function">findViewById</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>title<span class="token punctuation">)</span><span class="token punctuation">;</span>  
-
-title<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>titleinfo<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+title<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>titleinfo<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -531,11 +531,12 @@ title<span class="token punctuation">.</span><span class="token function">setTex
 <ul>
 <li>XML资源使用实例片段</li>
 </ul>
-<pre class="line-numbers language-xml"><code class="language-xml">&lt;EditText android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:text=" @string/title"
-          android:textColor=" @color/blue"
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>EditText</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EditText</span> <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span>
+          <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span>
+          <span class="token attr-name"><span class="token namespace">android:</span>text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span> @string/title<span class="token punctuation">"</span></span>
+          <span class="token attr-name"><span class="token namespace">android:</span>textColor</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span> @color/blue<span class="token punctuation">"</span></span> 
+<span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>EditText</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -548,9 +549,9 @@ title<span class="token punctuation">.</span><span class="token function">setTex
 <li><p>颜色表示方法</p>
 <ul>
 <li><p>使用Color类的常量</p>
-<p>如：Int color = Colo.BLIE;//创建一个蓝色</p>
+<p>如：int color = Color.BLUE;//创建一个蓝色</p>
 </li>
-<li><p>使用Color类的静态方法argb穿几案颜色</p>
+<li><p>使用Color类的静态方法argb创建颜色</p>
 <p>int color = Color.argb(127.255.0.255);//半透明紫色</p>
 </li>
 <li><p>在XML资源文件定义颜色值</p>
@@ -649,7 +650,7 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
 </tr>
 <tr>
 <td>布局XML文件格式</td>
-<td align="left">使用<code>&lt;?xml version= &quot;1.0&quot;encoding=&quot;utf-8&quot; ?&gt;</code><br><code>&lt;布局类xmlns:android=&quot;http://schemas.android.</code><br><code>Com/apk/res/android&quot; id= &quot;@id+/string_na</code><br><code>me&quot;(属性)&gt;</code><br><code>&lt;视图组件或者其他嵌套布局类&gt;</code><br><code>&lt;requestFocus/&gt;</code><br><code>&lt;/布局类&gt;</code></td>
+<td align="left">使用\<?xml version= "1.0"encoding="utf-8" ?><br>\&lt;布局类xmlns:android=”<a href="http://schemas.android" target="_blank" rel="noopener">http://schemas.android</a>.<br>Com/apk/res/android” id= “@id+/string_na<code>&lt;br&gt;</code>me”(属性)&gt;<br>\&lt;视图组件或者其他嵌套布局类&gt;<br>\<requestfocus><br>\&lt;/布局类&gt;</requestfocus></td>
 </tr>
 <tr>
 <td>获得XML资源的方法</td>
