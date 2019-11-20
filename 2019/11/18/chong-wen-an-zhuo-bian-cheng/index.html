@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="重温安卓编程, 谢啓飞 啓飞个人网 前端">
+    <meta name="keywords" content="安卓编程笔记, 谢啓飞 啓飞个人网 前端">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>重温安卓编程 | 飞吧</title>
+    <title>安卓编程笔记 | 飞吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -286,13 +286,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        重温安卓编程
+                        安卓编程笔记
                     </div>
                 </div>
             </div>
@@ -441,14 +441,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    11 分
                 </div>
                 
                 
@@ -498,19 +498,17 @@
 <li><p>基于Java代码访问资源</p>
 <ul>
 <li><p>Java代码访问方式:</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token punctuation">[</span>\<span class="token operator">&lt;</span>packge<span class="token operator">-</span>name<span class="token operator">></span><span class="token punctuation">.</span><span class="token punctuation">]</span>R<span class="token punctuation">.</span>   <span class="token comment" spellcheck="true">//R类所在包路径可省略</span>
-<span class="token operator">&lt;</span>resource_type<span class="token operator">></span><span class="token punctuation">.</span>&lt;resource_name<span class="token operator">></span>  <span class="token comment" spellcheck="true">//resource_type：资源类型如color等。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token punctuation">[</span>\<span class="token operator">&lt;</span>packge<span class="token operator">-</span>name<span class="token operator">></span><span class="token punctuation">.</span><span class="token punctuation">]</span>R<span class="token punctuation">.</span>   <span class="token comment" spellcheck="true">//R类所在包路径可省略</span>
+     <span class="token operator">&lt;</span>resource_type<span class="token operator">></span><span class="token punctuation">.</span>&lt;resource_name<span class="token operator">></span>  <span class="token comment" spellcheck="true">//resource_type：资源类型如color等。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li><p>Java访问示例</p>
-<ul>
+</li>
 <li><p>//从drawable目录中加载图片，设置为背景图片</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token function">getWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setBackgroundDrawableResource</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>back<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>//从string设置字符串资源，设置为文本框的显示内容</p>
 <pre class="line-numbers language-java"><code class="language-java">TextView title<span class="token operator">=</span><span class="token punctuation">(</span>TextView<span class="token punctuation">)</span><span class="token function">findViewById</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>title<span class="token punctuation">)</span><span class="token punctuation">;</span>  
 title<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>titleinfo<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-</ul>
 </li>
 </ul>
 </li>
@@ -677,6 +675,167 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
 <li>声明其他应用程序与该应用程序交互需要的权限</li>
 <li>该应用程序所需的安卓API版本。</li>
 <li>列出该应用程序所需类库。</li>
+</ul>
+</li>
+</ol>
+<h1 id="第四章-界面编程任务分析与设计"><a href="#第四章-界面编程任务分析与设计" class="headerlink" title="第四章 界面编程任务分析与设计"></a>第四章 界面编程任务分析与设计</h1><h2 id="4-1-循序渐进"><a href="#4-1-循序渐进" class="headerlink" title="4.1 循序渐进"></a>4.1 循序渐进</h2><ol>
+<li><p>Activity简介</p>
+<ul>
+<li>安卓的视图组件，四大组件之一。</li>
+<li>定义用户可以看到触摸到的界面。</li>
+<li>活动内使用各种界面组件，实现交互动作。</li>
+<li>通过活动，用户界面之间切换跳转、进行数据传递。</li>
+</ul>
+</li>
+<li><p>Activity概念</p>
+<ul>
+<li>用来包装用户界面组件的容器，实现用户和界面组件之间的交互。</li>
+</ul>
+</li>
+<li><p>案列分析教学特点和注意事项</p>
+<ul>
+<li>界面编程案例分析教学特点<ul>
+<li>案例：基于安卓系统的计算器</li>
+<li>特点：案例驱动，实践先行</li>
+<li>优势：在实践中学习抽象的概念</li>
+</ul>
+</li>
+<li>界面编程案例分析注意事项<ul>
+<li>知识要点：活动的概念和使用</li>
+<li>分析技巧：如何将实际中的问题进行分析；分析问题和解决问题的方法</li>
+<li>编码技巧：在案例中学习编码技巧</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>计算器案例</p>
+<ul>
+<li><p>操作过程：</p>
+<ol>
+<li><p>用户输入两个计算数；</p>
+</li>
+<li><p>选择计算类型；</p>
+</li>
+<li><p>点击计算按钮，进行计算</p>
+</li>
+<li><p>将结果展示给用户</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-2-活动的创建和使用"><a href="#4-2-活动的创建和使用" class="headerlink" title="4.2 活动的创建和使用"></a>4.2 活动的创建和使用</h2><ol>
+<li><p>创建活动应用程序</p>
+<ul>
+<li>应用程序通常由多个活动松耦合的组成</li>
+<li>活动是界面上的组件在屏幕上展示的容器</li>
+<li>活动通过布局文件展示界面布局的内容</li>
+<li>活动的生命周期，利用周期的方法扩展</li>
+</ul>
+</li>
+<li><p>创建活动步骤</p>
+<ul>
+<li>声明活动类名，继承于活动</li>
+<li>实现onCreate(Bundle bundle)方法，在系统初始化完成活动对象之后，进行用户自定义的初始化活动</li>
+<li>在onCreate(View view)设置用户界面的布局文件</li>
+<li>通过活动中的findViewById(int id)获取各个界面组件，并基于其属性和方法进行相应的操作</li>
+<li>如果需要在销毁活动进行处理，可以实现onDestroy()的方法。</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-3-活动的声明和配置"><a href="#4-3-活动的声明和配置" class="headerlink" title="4.3 活动的声明和配置"></a>4.3 活动的声明和配置</h2><ol>
+<li><p>活动的声明和配置</p>
+<ul>
+<li><p>活动定义后需在AndroidManifest.xml中声明</p>
+</li>
+<li><p>`&lt;application…/&gt;·节点内添加·&lt;activity…/&gt;·子元素</p>
+</li>
+<li><p>在<code>&lt;activity&gt;</code>子节点内定义Activity的类型（入口活动）</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span>activity android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">"com.quck.android.calculator"</span>
+    android<span class="token operator">:</span>icon<span class="token operator">=</span><span class="token string">"@drawable/pic.png"</span>
+        android<span class="token operator">:</span>label<span class="token operator">=</span><span class="token string">"@string/app_name"</span> <span class="token operator">></span>
+            <span class="token comment" spellcheck="true">//略去其中内容</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>activity<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>配置活动——示例分析</p>
+<p>活动的主要配置属性有如下三个：</p>
+<ul>
+<li><p>name：指定该活动的类名</p>
+</li>
+<li><p>icon：是定该活动对象的图标（可选）</p>
+</li>
+<li><p>label：指定该活动的标签</p>
+</li>
+<li><p>在<code>&lt;activity&gt;</code>节点中指定一个或者多个<code>&lt;intent-filter.../&gt;</code>元素Intent的类型和Action决定活动是否会接收消息。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-4-活动之间的数据交换和调用"><a href="#4-4-活动之间的数据交换和调用" class="headerlink" title="4.4 活动之间的数据交换和调用"></a>4.4 活动之间的数据交换和调用</h2><ol>
+<li><p>活动之间的数据交换和调用</p>
+<ul>
+<li>活动之间跳转，需传递数据信息</li>
+<li>通过Intent来进行数据传递</li>
+<li>数据需要放入Intent或者Bundle之内</li>
+</ul>
+</li>
+<li><p>什么是Bundle？</p>
+<ul>
+<li>Bundle类是一个key-value对，一个映射，把字符串映射为各种类型。</li>
+</ul>
+</li>
+<li><p>数据交换</p>
+<ul>
+<li>写入数据<ul>
+<li>putExtras(Bundle data)向Intent中放入需要携带的Bundle数据</li>
+<li>putXXX(String key, Xxx data)向Bundle放入Int,Long,String等各种类型的数据</li>
+<li>putSerializable(String key, Serialzable data):向Bundle中放入一份可序列化对象</li>
+</ul>
+</li>
+<li>读取数据<ul>
+<li>getExtras()从Intent中读取需要携带的Bundle数据</li>
+<li>getXXX(String key)从Bundle，Intent读取int,Long,String等各种类型的数据</li>
+<li>getSerializable(String key)从Bundle，Intent中读取一个可序列化的对象</li>
+</ul>
+</li>
+<li>活动交换示例</li>
+<li>Intent vs Bundle<ul>
+<li>相同点：传递数据时，作用相同</li>
+<li>不同点：在多个活动之间传递相同数据时，推荐使用Bundle来储存和传递数据，减少重复的读写操作</li>
+<li>例：活动跳转A-&gt;B-&gt;C传递相同数据<ul>
+<li>如果使用Intent，则需要在A、B、C的Intent之间进行数据的复制</li>
+<li>如果使用Bundle，则可直接传递Bundle对象即可</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>返回数据</p>
+<ul>
+<li><p>startActivityForResult(Intent intent, int requestCode)</p>
+<p>跳转到指定的活动</p>
+<p>参数intent：指定目的活动类名</p>
+<p>参数requestCode：由程序中自定义的识别码，用以区分不同的七点活动</p>
+</li>
+<li><p>setResult(int resultCode, Intent data)</p>
+<p>设置resultCode表示结果的Activity，第二个参数保存传递的结果数据</p>
+</li>
+<li><p>onActivityResult(int requestCode, int resultCode, Intent data)</p>
+<p>参数requestCode：起点活动定义唯一值</p>
+<p>参数resultCode：目的活动定义的唯一标识值</p>
+<p>参数data：从墓地活动返回的数据</p>
+</li>
+</ul>
+</li>
+<li><p>数据使用步骤</p>
+<ul>
+<li>起点活动，调用startActivityForResult()跳转目的活动</li>
+<li>在目的活动中调用setResult()</li>
+<li>在起点活动覆写onActivityResult()在方法内获取目的活动返回的数据</li>
 </ul>
 </li>
 </ol>
@@ -1112,9 +1271,9 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="重温安卓编程">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="安卓编程笔记">
                         
-                        <span class="card-title">重温安卓编程</span>
+                        <span class="card-title">安卓编程笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1162,7 +1321,7 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="埃森二日">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="埃森二日">
                         
                         <span class="card-title">埃森二日</span>
                     </div>
@@ -1360,7 +1519,7 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">8.1k</span>
+            <span class="white-color">9.2k</span>
             
 
             <br>
