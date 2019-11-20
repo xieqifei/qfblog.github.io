@@ -547,10 +547,10 @@ title<span class="token punctuation">.</span><span class="token function">setTex
 <li><p>颜色表示方法</p>
 <ul>
 <li><p>使用Color类的常量</p>
-<p>如：int color = Color.BLUE;//创建一个蓝色</p>
+<p>如：<code>int color = Color.BLUE;//创建一个蓝色</code></p>
 </li>
 <li><p>使用Color类的静态方法argb创建颜色</p>
-<p>int color = Color.argb(127.255.0.255);//半透明紫色</p>
+<p><code>int color = Color.argb\(127.255.0.255\);//半透明紫色</code></p>
 </li>
 <li><p>在XML资源文件定义颜色值</p>
 <pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resources</span><span class="token punctuation">></span></span>
@@ -573,7 +573,7 @@ title<span class="token punctuation">.</span><span class="token function">setTex
 </li>
 <li><p>读取文件资源的方式不同</p>
 <ul>
-<li><p>读取res/raw下的文件资源，通过当前Activity中的getResources()方法：</p>
+<li><p>读取res/raw下的文件资源，通过当前Activity中的<code>getResources()</code>方法：</p>
 <pre class="line-numbers language-java"><code class="language-java">InputStream is <span class="token operator">=</span> <span class="token function">getResources</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>
 <span class="token function">openRawResource</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>filename<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
@@ -688,10 +688,12 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
 </ul>
 </li>
 <li><p>Activity概念</p>
+</li>
+</ol>
 <ul>
 <li>用来包装用户界面组件的容器，实现用户和界面组件之间的交互。</li>
 </ul>
-</li>
+<ol start="3">
 <li><p>案列分析教学特点和注意事项</p>
 <ul>
 <li>界面编程案例分析教学特点<ul>
@@ -737,10 +739,10 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
 <li><p>创建活动步骤</p>
 <ul>
 <li>声明活动类名，继承于活动</li>
-<li>实现onCreate(Bundle bundle)方法，在系统初始化完成活动对象之后，进行用户自定义的初始化活动</li>
-<li>在onCreate(View view)设置用户界面的布局文件</li>
-<li>通过活动中的findViewById(int id)获取各个界面组件，并基于其属性和方法进行相应的操作</li>
-<li>如果需要在销毁活动进行处理，可以实现onDestroy()的方法。</li>
+<li>实现<code>onCreate(Bundle bundle)</code>方法，在系统初始化完成活动对象之后，进行用户自定义的初始化活动</li>
+<li>在<code>onCreate(View view)</code>设置用户界面的布局文件</li>
+<li>通过活动中的<code>findViewById(int id)</code>获取各个界面组件，并基于其属性和方法进行相应的操作</li>
+<li>如果需要在销毁活动进行处理，可以实现<code>onDestroy()</code>的方法。</li>
 </ul>
 </li>
 </ol>
@@ -783,22 +785,24 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
 </ul>
 </li>
 <li><p>什么是Bundle？</p>
+</li>
+</ol>
 <ul>
 <li>Bundle类是一个key-value对，一个映射，把字符串映射为各种类型。</li>
 </ul>
-</li>
+<ol start="3">
 <li><p>数据交换</p>
 <ul>
 <li>写入数据<ul>
-<li>putExtras(Bundle data)向Intent中放入需要携带的Bundle数据</li>
-<li>putXXX(String key, Xxx data)向Bundle放入Int,Long,String等各种类型的数据</li>
-<li>putSerializable(String key, Serialzable data):向Bundle中放入一份可序列化对象</li>
+<li><code>putExtras(Bundle data)</code>向Intent中放入需要携带的Bundle数据</li>
+<li><code>putXXX(String key, Xxx data)</code>向Bundle放入Int,Long,String等各种类型的数据</li>
+<li><code>putSerializable(String key, Serialzable data)</code>:向Bundle中放入一份可序列化对象</li>
 </ul>
 </li>
 <li>读取数据<ul>
-<li>getExtras()从Intent中读取需要携带的Bundle数据</li>
-<li>getXXX(String key)从Bundle，Intent读取int,Long,String等各种类型的数据</li>
-<li>getSerializable(String key)从Bundle，Intent中读取一个可序列化的对象</li>
+<li><code>getExtras()</code>从Intent中读取需要携带的Bundle数据</li>
+<li><code>getXXX(String key)</code>从Bundle，Intent读取int,Long,String等各种类型的数据</li>
+<li><code>getSerializable(String key)</code>从Bundle，Intent中读取一个可序列化的对象</li>
 </ul>
 </li>
 <li>活动交换示例</li>
@@ -816,15 +820,15 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
 </li>
 <li><p>返回数据</p>
 <ul>
-<li><p>startActivityForResult(Intent intent, int requestCode)</p>
+<li><p><code>startActivityForResult(Intent intent, int requestCode)</code></p>
 <p>跳转到指定的活动</p>
 <p>参数intent：指定目的活动类名</p>
 <p>参数requestCode：由程序中自定义的识别码，用以区分不同的七点活动</p>
 </li>
-<li><p>setResult(int resultCode, Intent data)</p>
+<li><p><code>setResult(int resultCode, Intent data)</code></p>
 <p>设置resultCode表示结果的Activity，第二个参数保存传递的结果数据</p>
 </li>
-<li><p>onActivityResult(int requestCode, int resultCode, Intent data)</p>
+<li><p><code>onActivityResult(int requestCode, int resultCode, Intent data)</code></p>
 <p>参数requestCode：起点活动定义唯一值</p>
 <p>参数resultCode：目的活动定义的唯一标识值</p>
 <p>参数data：从墓地活动返回的数据</p>
@@ -833,9 +837,9 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
 </li>
 <li><p>数据使用步骤</p>
 <ul>
-<li>起点活动，调用startActivityForResult()跳转目的活动</li>
-<li>在目的活动中调用setResult()</li>
-<li>在起点活动覆写onActivityResult()在方法内获取目的活动返回的数据</li>
+<li>起点活动，调用<code>startActivityForResult()</code>跳转目的活动</li>
+<li>在目的活动中调用<code>setResult()</code></li>
+<li>在起点活动覆写<code>onActivityResult()</code>在方法内获取目的活动返回的数据</li>
 </ul>
 </li>
 </ol>
