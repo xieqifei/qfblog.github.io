@@ -286,7 +286,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -441,14 +441,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    4.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    15 分
                 </div>
                 
                 
@@ -840,6 +840,168 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
 <li>起点活动，调用<code>startActivityForResult()</code>跳转目的活动</li>
 <li>在目的活动中调用<code>setResult()</code></li>
 <li>在起点活动覆写<code>onActivityResult()</code>在方法内获取目的活动返回的数据</li>
+</ul>
+</li>
+</ol>
+<h1 id="第五章-服务开发和广播事件"><a href="#第五章-服务开发和广播事件" class="headerlink" title="第五章 服务开发和广播事件"></a>第五章 服务开发和广播事件</h1><h2 id="5-1-循序渐进"><a href="#5-1-循序渐进" class="headerlink" title="5.1 循序渐进"></a>5.1 循序渐进</h2><ul>
+<li><p>案列：音乐播放器</p>
+<ul>
+<li><p>任务概述</p>
+</li>
+<li><p>功能分析</p>
+<p>界面设计</p>
+<p>实现暂停、播放和停止</p>
+<p>播放同时，显示歌手和音乐名称</p>
+</li>
+<li><p>用户界面设计</p>
+<p>主界面</p>
+</li>
+<li><p>技术要点</p>
+<p>服务的创建、调用</p>
+<p>服务和活动之间的通信</p>
+<p>Intent对象的使用</p>
+</li>
+<li><p>案例演示</p>
+</li>
+</ul>
+</li>
+<li><p>案例任务分析和设计</p>
+<p>音乐播放器界面分析</p>
+</li>
+<li><p>核心代码设计和实现</p>
+<p>核心代码编写步骤：</p>
+<ol>
+<li>创建安卓项目MusicBox</li>
+<li>在res/loyout目录，创建播放器的主界面布局文件</li>
+<li>定义一个MusicBoxContant的常量类存放程序中用到的静态或不变的信息</li>
+<li>创建音乐播放器的服务类</li>
+<li>在全局配置文件中，声明服务类</li>
+<li>定义实现音乐播放器的主界面</li>
+<li>定义事项ActicityReciver事件接收器，接受音乐服务状态变化广播事件的接收器</li>
+<li>定义实现按钮事件接收器，播放和停止按钮，发送广播事件</li>
+</ol>
+</li>
+</ul>
+<h2 id="5-2-安卓中的系统服务"><a href="#5-2-安卓中的系统服务" class="headerlink" title="5.2 安卓中的系统服务"></a>5.2 安卓中的系统服务</h2><ul>
+<li><p>安卓将诸多常用功能内置为系统服务</p>
+</li>
+<li><p>提供简单的获取系统服务的方式</p>
+</li>
+<li><p>系统服务涵盖了安卓绝大部分常用功能，如，拨打电话，发送短信</p>
+</li>
+</ul>
+<ol>
+<li><p>安卓中获取系统服务</p>
+<ul>
+<li><p>获取系统服务代码示例</p>
+<p><code>TelephonyManager phoneManager=(TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);</code></p>
+</li>
+<li><p>强制类型转化</p>
+<ul>
+<li>在程序运行过程中，将父类型对象转化为子类型对象。</li>
+<li>由于子类型相比父类型的内涵丰富，属性方法更多，所以要把父类型转化为子类型时，需要强制转化，成为强制类型转换。</li>
+<li>并不是所有父类型都可以转化为子类型，要根据具体的使用情况来做具体的判断。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="5-3-广播接收机制"><a href="#5-3-广播接收机制" class="headerlink" title="5.3 广播接收机制"></a>5.3 广播接收机制</h2><ol>
+<li><p>广播消息</p>
+<ul>
+<li>广播是一种在应用程序之间传输信息的计指</li>
+<li>BroadcastReceiver广播接收者</li>
+<li>广播消息Intent（消息载体）</li>
+<li>被订阅广播的多个广播接收者接收</li>
+<li>消息订阅者不了解发送者</li>
+</ul>
+</li>
+<li><p>广播接收者</p>
+<ul>
+<li>BroadcastReceiver对发出的广播事件进行过滤，应用程序通知其他应用程序某些数据已经下载完毕。</li>
+<li>广播接收者没有图形界面</li>
+<li>广播可以有多个接收者，彼此不知晓。广播接收者之间匿名</li>
+</ul>
+</li>
+<li><p>监听广播机制</p>
+<ul>
+<li>广播和事件监听器是分离的</li>
+<li>通过安卓系统进行广播、接收广播事件</li>
+<li>注册和移除监听通过安卓系统来完成</li>
+<li>安卓系统提供很多广播定义在<code>android.content.Intent</code>类中</li>
+</ul>
+</li>
+<li><p>广播方法</p>
+<p><code>sendBroadcast()</code>:普通模式</p>
+<ul>
+<li>所有注册了广播的接收者会获得事件通知</li>
+<li>接收者接受顺序不确定并发地在各自的应用进程中执行</li>
+<li>接收者和发送者不知晓</li>
+</ul>
+<p><code>sendOrderedBroadcast()</code>:有序广播模式</p>
+<ul>
+<li><p>接收者依照设定的优先级高低依次接受</p>
+</li>
+<li><p>高优先级接收者可以中断后续广播的接收，<code>BroadcastReceiver.abortBroadcast()</code>终止这个广播事件的传播，低优先级的触发器组件不再有机会接收</p>
+</li>
+<li><p>高优先级接收者可添加额外信息给后续接收者</p>
+<p><code>BroadcastReceiver.setResult()</code></p>
+</li>
+</ul>
+</li>
+<li><p>监听广播实现</p>
+<ul>
+<li>获取广播事件的消息接口名称</li>
+<li>事件定制的广播接收器，添加相应的处理逻辑</li>
+<li>注册广播接收器到安卓系统中</li>
+</ul>
+</li>
+<li><p>监听广播实现示例</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyBroadcastReceiver</span> <span class="token keyword">extends</span> <span class="token class-name">BroadcastReceiver</span><span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">//action名称，此为固定的字符</span>
+String SMS_RECEIVED<span class="token operator">=</span><span class="token string">"android.provider.Telephony.SMS_RECEIVED"</span><span class="token punctuation">;</span>
+<span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onReceive</span><span class="token punctuation">(</span>COntext context<span class="token punctuation">,</span> Intent intent<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">//如事件有短信接收，则执行</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>intent<span class="token punctuation">.</span><span class="token function">getAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">quals</span><span class="token punctuation">(</span>SMS_RECEIVED<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">//进行短信接收到之后的逻辑处理</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>监听广播注册</p>
+<p>在manifest中注册监听器</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>声明接收器<span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>receiver android<span class="token operator">:</span>name <span class="token operator">=</span> <span class="token string">".MyBroadReceiver"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>接收事件的过滤条件声明和优先级<span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>intent<span class="token operator">-</span>filter android<span class="token operator">:</span>priority<span class="token operator">=</span><span class="token string">"1000"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>支持接收的事件类型<span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>action android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">"android.provider.Telephony.SMS_RECEIVED"</span><span class="token operator">/</span><span class="token operator">></span>
+     <span class="token operator">&lt;</span><span class="token operator">/</span>intent<span class="token operator">-</span>filter<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>receiver<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>监听系统级事件，需要相应的权限：接收者和发送短信的权限<span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>uses<span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">"android.permission.RECEIVE_SMS"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>uses<span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">"android.permission.SEND_SMS"</span><span class="token operator">/</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在运行代码中注册广播监听器</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//创建监听器对象</span>
+MyBroadcastReceiver myMsgInfoReceiver<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">MyBroadcastReceiver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//声明IntentFilter，描述可以接收的广播消息</span>
+IntentFilter intentFilter<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">IntentFilter</span><span class="token punctuation">(</span><span class="token string">"android.provider.Telephony.SMS_RECEIED"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//调用Activity的方法，注册监听器</span>
+<span class="token function">registerReceiver</span><span class="token punctuation">(</span>mBatteryInfoReceiver<span class="token punctuation">,</span>intentFilter<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>广播事件生命周期</p>
+<ul>
+<li>广播消息到来，新建BroadcastReceiver对象</li>
+<li>调用<code>onReceive()</code>方法，执行操作</li>
+<li>操作完成后，对象被销毁</li>
+<li>事件出发—&gt;创建事件监听器对象—&gt;调用监听器的<code>onReceiver()</code>—&gt;销毁事件监听器的对象—&gt;结束操作，返回</li>
+</ul>
+</li>
+<li><p>广播事件注意事项</p>
+<ul>
+<li>在广播接收器中响应逻辑中不能执行比较耗时的操作</li>
+<li>在onReceive()方法中执行超过10秒，就会弹出无响应对话框。</li>
 </ul>
 </li>
 </ol>
@@ -1275,7 +1437,7 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="安卓编程笔记">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="安卓编程笔记">
                         
                         <span class="card-title">安卓编程笔记</span>
                     </div>
@@ -1325,7 +1487,7 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="埃森二日">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="埃森二日">
                         
                         <span class="card-title">埃森二日</span>
                     </div>
@@ -1523,7 +1685,7 @@ InputStream is <span class="token operator">=</span> am<span class="token punctu
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">9.2k</span>
+            <span class="white-color">10.5k</span>
             
 
             <br>
