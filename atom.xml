@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>飞吧</title>
   
-  <subtitle>个人博客</subtitle>
+  <subtitle>Fei.Bar</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fei.bar/"/>
