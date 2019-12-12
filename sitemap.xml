@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://fei.bar/2019/12/12/ru-he-zi-ji-kai-fa-yi-ge-vpn-cheng-xu/</loc>
+    
+    <lastmod>2019-12-12T22:09:04.908Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://fei.bar/2019/12/08/lan-zou-yun-wang-pan-qing-shuang-ban/</loc>
     
     <lastmod>2019-12-08T18:14:18.936Z</lastmod>
@@ -100,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://fei.bar/tags/index.html</loc>
-    
-    <lastmod>2019-10-23T21:16:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://fei.bar/archives/index.html</loc>
     
     <lastmod>2019-10-23T21:16:56.000Z</lastmod>
@@ -115,6 +115,13 @@
   
   <url>
     <loc>https://fei.bar/categories/index.html</loc>
+    
+    <lastmod>2019-10-23T21:16:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://fei.bar/tags/index.html</loc>
     
     <lastmod>2019-10-23T21:16:56.000Z</lastmod>
     

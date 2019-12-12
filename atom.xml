@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fei.bar/"/>
-  <updated>2019-12-08T16:26:57.788Z</updated>
+  <updated>2019-12-12T22:09:04.908Z</updated>
   <id>https://fei.bar/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何自己开发一个VPN App</title>
+    <link href="https://fei.bar/2019/12/12/ru-he-zi-ji-kai-fa-yi-ge-vpn-cheng-xu/"/>
+    <id>https://fei.bar/2019/12/12/ru-he-zi-ji-kai-fa-yi-ge-vpn-cheng-xu/</id>
+    <published>2019-12-12T20:34:16.000Z</published>
+    <updated>2019-12-12T22:09:04.908Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;第一章-简介&quot;&gt;&lt;a href=&quot;#第一章-简介&quot; class=&quot;headerlink&quot; title=&quot;第一章 简介&quot;&gt;&lt;/a&gt;第一章 简介&lt;/h1&gt;&lt;h2 id=&quot;1-1-学习条件和要求&quot;&gt;&lt;a href=&quot;#1-1-学习条件和要求&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="安卓编程" scheme="https://fei.bar/categories/%E5%AE%89%E5%8D%93%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="微批恩" scheme="https://fei.bar/tags/%E5%BE%AE%E6%89%B9%E6%81%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>百度云网盘 破解版</title>

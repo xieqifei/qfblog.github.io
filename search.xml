@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>如何自己开发一个VPN App</title>
+      <link href="/2019/12/12/ru-he-zi-ji-kai-fa-yi-ge-vpn-cheng-xu/"/>
+      <url>/2019/12/12/ru-he-zi-ji-kai-fa-yi-ge-vpn-cheng-xu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第一章-简介"><a href="#第一章-简介" class="headerlink" title="第一章 简介"></a>第一章 简介</h1><h2 id="1-1-学习条件和要求"><a href="#1-1-学习条件和要求" class="headerlink" title="1.1 学习条件和要求"></a>1.1 学习条件和要求</h2><p>学习条件：</p><ul><li>你不用一定学习过JAVA或其他编程语言。</li><li>你不用一定了解或精通安卓编程。</li><li>你不用一定懂得Linux编程。</li><li>你需要自费支付服务器费用，国外服务器大概一个月30元，也可能有便宜的或更贵但性能更好的，你可自行选择，当然如果愿意用国内服务器练手，腾讯阿里的学生服务器一年只要120，当然这个服务器做出的VPN无法翻墙。</li><li>你需要消耗一定的时间和耐心。</li></ul><p>如果你已经满足以上条件了，那么我希望你在浏览以下文章时，同意我的以下要求：</p><ul><li>你保证不使用本教程制作的VPN进行牟利。</li><li>你保证不在中国大陆地区散播和分享制作的VPN。</li><li>你保证不使用此VPN进行其他违法犯罪活动或在外网发表对国家不利的言论。</li></ul><blockquote><p>若你已同意以上要求，请继续向下浏览，若你无法做到上述要求，请停止继续浏览。</p></blockquote><h2 id="1-2-功能介绍"><a href="#1-2-功能介绍" class="headerlink" title="1.2 功能介绍"></a>1.2 功能介绍</h2><p>软件的实现原理，我不做介绍，有兴趣的同学可自行学习。</p><p>这里只教大家如何在我的软件基础上通过简单修改，制作一个自用VPN客户端。当然你也可以使用SS、SSR或V2ray等现成软件，并配置服务器后翻墙。</p><p>VPN功能：</p><ul><li>可配置多条线路，以适用不同的服务器，或同一服务器上的不同用户。</li><li>客户端主动更改主题颜色。</li><li>推送更新通知，和推送广告。可在服务端更改是否推送广告。</li></ul><p>本软件没有账户登陆等限定条件。只要安装软件，即可翻墙，当然前提条件是，你配置好了服务器。</p><p>下面展示我已经制作好的VPN程序截图，测试已能翻墙。</p><img src="http://qn.xieqifei.com/static/images/ecaoovpn1.jpg"><img src="http://qn.xieqifei.com/static/images/ecaoovpn2.jpg"><img src="http://qn.xieqifei.com/static/images/ecaoovpn3.jpg"><img src="http://qn.xieqifei.com/static/images/ecaoovpn4.jpg"><p>如此，我们便开始制作自己的VPN吧。</p><h1 id="第二章-服务端配置"><a href="#第二章-服务端配置" class="headerlink" title="第二章 服务端配置"></a>第二章 服务端配置</h1><h2 id="2-1-VPS服务器购买"><a href="#2-1-VPS服务器购买" class="headerlink" title="2.1 VPS服务器购买"></a>2.1 VPS服务器购买</h2><p>这里我推荐给大家的是<a href="https://www.vultr.com/?ref=8345070" target="_blank" rel="noopener">vultr.com</a>。为什么这家服务器呢？这家服务器可以按小时收费，如果你不嫌麻烦，可以在需要的使用VPN的时候，再开启一台VPS。不需要的时候关闭，当然重新开启需要重新配置服务器等操作。只是我觉得性价比挺高。最重要的是支持支付宝微信付款！</p><p>下面教大家购买VPS服务器。主要是没看到中文翻译，所以决定一步步教大家，毕竟有的人可能并不会。</p><ol><li><p>点击链接打开vultr网站，<a href="https://www.vultr.com/?ref=8345070" target="_blank" rel="noopener">www.vultr.com</a>额外说明一句，通过我的链接打开注册，我和你都可以获得10美元的奖励费用，当然这笔钱，需要你购买服务器之后才会发放。只是给大家说明这点，当然如果大家有其他选择也是可以的。</p></li><li><p>创建账户。</p><img src="http://qn.xieqifei.com/static/images/vultr-step1.jpg"><p>填写邮箱，按要求设置密码，密码要求至少一个大写字母，一个小写字母，一个数字，和至少十个字符。点击“create acounnt”即可。</p></li><li><p>Vultr充值。</p><p>注册登录后会进入个人面板，左边栏选择 <strong>“Billing”</strong> ，选择支付方式和金额，付款即可。</p><p>Vultr 支持支付宝付款，很方便。但是个人更推荐有 Paypal 的使用 Paypal。</p><img src="http://qn.xieqifei.com/static/images/vultr-step2.jpg"></li><li><p>创建VPS</p><p>选择 <strong>“Servers”</strong> ，点击右边蓝色的 “<strong>+</strong>” 添加 VPS。</p><img src="http://qn.xieqifei.com/static/images/vultr-step3.jpg"><p><strong>a.选择节点</strong></p><p>日本距离最近，延迟最低，但太热门了，白天还好，晚上有时很慢；洛杉矶比日本稳些。</p><img src="http://qn.xieqifei.com/static/images/vultr-step4.jpg"><p><strong>b.选择系统</strong></p><p>选择系统。支持 Windows 和自己上传 ISO 系统镜像。这里请大家选择<strong>CentOS系统7x64</strong></p><img src="http://qn.xieqifei.com/static/images/vultr-step5.png"><p><strong>c.选择套餐</strong></p><p>价格从 $2.5/mo 到 $640/mo，各种配置都有，最低 $2.5/mo 的套餐现在基本买不到了。要求必须<strong>有IPv4地址</strong>。</p><img src="http://qn.xieqifei.com/static/images/vultr-step6.jpg"><p><strong>d.其他选项</strong></p><p>有 IPv6，私密，主机名、标签等，<strong>无特殊需要全部默认即可。</strong></p><p>选好后点击右下角的 <strong>“Deploy Now”</strong> ，开始安装 VPS。</p><p><strong>e.查看VPS</strong></p><p>已购买的 VPS 都会显示在 “Servers” 面板中，当显示 “Running” 时即表示安装完成。点击 <strong>“Manage”</strong> 进入 VPS 管理面板。</p><img src="http://qn.xieqifei.com/static/images/vultr-step7.jpg"><p>VPS 管理面板，这里需要记录下 IP 地址（IP Address）、用户名（Username）、密码（Password）供稍后连接 VPS 时使用。</p><img src="http://qn.xieqifei.com/static/images/vultr-step8.jpg"></li><li><p>连接VPS</p><p>使用 ssh 工具连接我们的 VPS，Windows 推荐 xshell，Mac 可使用自带的终端。</p><p>Xshell 网盘链接：<a href="https://link.zhihu.com/?target=https%3A//pan.baidu.com/s/1pMbKLMb" target="_blank" rel="noopener">https://pan.baidu.com/s/1pMbKLMb</a> 密码：lwir</p><p><strong>Windows</strong></p><p>安装 xshell，打开软件。</p><p>点击 “文件” —&gt; “新建” —&gt; “连接”，输入 “名称” 和 “主机” （即VPS ip）。</p><img src="http://qn.xieqifei.com/static/images/vps-step1.jpg"><p>点击 “用户身份验证”，输入用户名（默认root）和密码。确认。</p><img src="http://qn.xieqifei.com/static/images/vps-step2.jpg"><p>连接 VPS，接受并保存密匙。</p><img src="http://qn.xieqifei.com/static/images/vps-step3.jpg"><img src="http://qn.xieqifei.com/static/images/vps-step4.jpg"><p>出现 <code>root@vultr:~#</code> 即连接成功，可以输入代码了进行操作了。</p><img src="http://qn.xieqifei.com/static/images/vps-step5.jpg"><blockquote><p>很重要的一点，因为不是所有的VPS在国内都能ping通，有的IP地址已经被国内网络屏蔽了，所以如果VPS连接不上，请你到 [ping.chinaz.com]输入你的IP地址测试，若国内连接均提示超时且为红色，请你在vultr中删除vps并重新创建一个可用的ip地址。</p></blockquote><img src="http://qn.xieqifei.com/static/images/vps-step7.jpg"><p><strong>Mac</strong></p><p>打开终端，输入以下代码登录 VPS，其中 root 即用户名，将 ip 更改为 VPS 的 IP 地址，回车。</p><pre class="line-numbers language-java"><code class="language-java">ssh root<span class="token annotation punctuation">@ip</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>输入 <code>yes</code> 确认，粘贴密码，回车。需要提醒的是，密码输入时并不会显示出来，直接复制粘贴，回车即可。出现 <code>root@vultr:~#</code> 即连接成功。</p><img src="http://qn.xieqifei.com/static/images/vps-step6.jpg"></li></ol><p>   <strong>未完待续，马上就来更新了————</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 安卓编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微批恩 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>百度云网盘 破解版</title>
       <link href="/2019/12/08/bai-du-yun-wang-pan-po-jie-ban/"/>
       <url>/2019/12/08/bai-du-yun-wang-pan-po-jie-ban/</url>
